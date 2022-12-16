@@ -1,0 +1,7 @@
+{
+    :local url "https://10.10.12.1:6082/php/uid.php\?vsys=2&rule=4";
+    :local host "logowanie.net.uw.edu.pl:6082";
+    :local request [/file get request.txt contents];
+    :local response [/tool fetch http-method=post url=$url host=$host http-data=$request as-value output=user];
+    :put ($response->"status");
+}

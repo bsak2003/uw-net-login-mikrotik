@@ -1,0 +1,12 @@
+{
+    :do {
+        :local res [/tool fetch url="http://example.com/" as-value output=user];
+        :if ($res->"status" != "finished") do={
+            :put "dead"
+        } else={
+            :put "alive";
+        }
+    } on-error={
+        :put "dead";
+    }
+}

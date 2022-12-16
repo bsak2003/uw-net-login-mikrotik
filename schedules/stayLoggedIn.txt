@@ -1,0 +1,6 @@
+# from startup, every 23h59m
+
+{
+    /system script run LogIn;
+    :log info "LogIn finished"
+}

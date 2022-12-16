@@ -1,0 +1,17 @@
+# from startup, every 59m
+# /log print where topics~"script
+
+{
+    :do {
+        :local res [/tool fetch url="http://example.com/" as-value output=user];
+        :if ($res->"status" != "finished") do={
+            :log error "tcp routing dead";
+            /system script run LogIn;
+        } else={
+            :log info "tcp routing alive";
+        }
+    } on-error={
+        :log error "tcp routing dead";
+        /system script run LogIn;
+    }
+}

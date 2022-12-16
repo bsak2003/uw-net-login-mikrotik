@@ -1,0 +1,1 @@
+inputStr=&escapeUser=&preauthid=&user=<USOS_ID_PESEL>&passwd=<USOS_PASSWORD>&ok=Login

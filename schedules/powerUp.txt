@@ -1,0 +1,9 @@
+# on startup, interval 00:00:00
+
+{
+    delay delay-time=15;
+    blink;
+    /system script run LogIn;
+    /system script run DoA;
+    :log info "powerup complete"
+}
